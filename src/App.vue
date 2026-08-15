@@ -8,7 +8,8 @@ import PageNav from "./components/PageNav.vue"
 import { findPage, site } from "./site"
 
 const route = useRoute()
-const isHome = computed(() => route.path === "/")
+// The home page and the 404 draw their own full-width layout; every other page is a doc page.
+const isFullWidth = computed(() => route.path === "/" || route.path === "/404")
 const pageTitle = computed(() => findPage(route.path)?.text)
 
 useHead({
@@ -30,7 +31,7 @@ useHead({
   <div class="min-h-screen bg-base-100 text-base-content flex flex-col">
     <SiteHeader />
 
-    <main v-if="isHome" class="flex-1">
+    <main v-if="isFullWidth" class="flex-1">
       <RouterView />
     </main>
 
