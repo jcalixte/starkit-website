@@ -48,8 +48,15 @@ never reaches Google. It ships one weight, so anything heavier is the browser's 
 
 ## Deploy
 
-Pushes to `main` are picked up by Coolify at https://platform.apoena.dev, which builds the
-`Dockerfile` — node prerenders the site, nginx serves it. `nginx.conf` resolves a clean URL to its
-prerendered directory with `try_files $uri $uri/ /index.html`.
+Coolify at https://platform.apoena.dev builds the `Dockerfile` — node prerenders the site, nginx
+serves it. `nginx.conf` resolves a clean URL to its prerendered directory with
+`try_files $uri $uri/index.html =404`, and hands an unmatched path to the prerendered 404 page.
+
+There is no push webhook yet, so a deploy is triggered by hand:
+
+```sh
+curl -X POST "https://platform.apoena.dev/api/v1/deploy?uuid=shlt8eya5tbh31cmsisay03a" \
+  -H "Authorization: Bearer $COOLIFY_API_TOKEN"
+```
 
 The site is https://starkit.app. Its DNS is an `at.marque.dns` record in the apoena PDS.
