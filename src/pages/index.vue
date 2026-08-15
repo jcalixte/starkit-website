@@ -40,7 +40,7 @@ const features = [
           <RouterLink to="/guide/your-first-script" class="btn btn-primary">
             Write your first Script
           </RouterLink>
-          <RouterLink to="/guide/" class="btn btn-ghost">Install Starkit</RouterLink>
+          <RouterLink to="/guide" class="btn btn-ghost">Install Starkit</RouterLink>
           <a :href="site.repo" class="btn btn-ghost">GitHub</a>
         </div>
       </div>

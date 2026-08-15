@@ -17,7 +17,7 @@ export const site = {
 }
 
 export const nav: NavLink[] = [
-  { text: "Write a Script", link: "/guide/" },
+  { text: "Write a Script", link: "/guide" },
   { text: "Reference", link: "/reference/vocabulary" },
   { text: "Download", link: "https://github.com/jcalixte/starkit/releases/latest" },
 ]
@@ -26,7 +26,7 @@ export const sidebar: SidebarSection[] = [
   {
     text: "Write a Script",
     items: [
-      { text: "Install Starkit", link: "/guide/" },
+      { text: "Install Starkit", link: "/guide" },
       { text: "Your first Script", link: "/guide/your-first-script" },
       { text: "The four Effects", link: "/guide/effects" },
       { text: "Input and Context", link: "/guide/input-and-context" },
@@ -38,7 +38,7 @@ export const sidebar: SidebarSection[] = [
   {
     text: "Reference",
     items: [
-      { text: "Reference", link: "/reference/" },
+      { text: "Reference", link: "/reference" },
       { text: "The Vocabulary", link: "/reference/vocabulary" },
       { text: "What you can import", link: "/reference/imports" },
       { text: "Limits", link: "/reference/limits" },
@@ -62,8 +62,12 @@ export function neighbours(path: string): { prev?: NavLink; next?: NavLink } {
   return { prev: pages[index - 1], next: pages[index + 1] }
 }
 
+/** Routes that a folder's index.md answers to, rather than a file of the same name. */
+const sectionIndexes = new Set(["/guide", "/reference"])
+
 /** Path of the source file behind a route, for the "edit this page" link. */
 export function sourceFile(path: string): string {
-  if (path === "/") return "/index.vue"
-  return path.endsWith("/") ? `${path}index.md` : `${path}.md`
+  const clean = normalise(path)
+  if (clean === "/") return "/index.vue"
+  return sectionIndexes.has(clean) ? `${clean}/index.md` : `${clean}.md`
 }
