@@ -30,9 +30,9 @@ const features = [
   <section class="starkit-gradient border-b border-base-300">
     <div class="max-w-6xl mx-auto px-4 lg:px-6 py-20 flex flex-col md:flex-row items-center gap-10">
       <div class="flex-1">
-        <h1 class="text-4xl md:text-5xl font-bold text-starkit-ink">Starkit</h1>
+        <h1 class="text-4xl md:text-5xl font-bold">Starkit</h1>
         <p class="mt-3 text-2xl md:text-3xl">Your own scripts, one chord away.</p>
-        <p class="mt-6 max-w-xl opacity-80">
+        <p class="mt-6 max-w-xl">
           A desktop bar for running Gleam scripts on macOS. ⌃⌘K summons it. Write a module, save the
           file, and it is in the bar by the next summon.
         </p>

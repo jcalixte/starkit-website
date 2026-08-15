@@ -8,10 +8,14 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
+/* Overriding --color-primary does NOT make DaisyUI recompute --color-primary-content: it keeps the
+   near-white label of its own purple primary, which lands at 1.9:1 on this periwinkle. Every
+   colour set here carries its own content colour. */
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
   --color-primary: #8ca9ff;
+  --color-primary-content: #14203a;
   --color-base-100: #fffdf6;
   --color-base-200: #fff8de;
   --color-base-300: #fff2c6;
@@ -21,6 +25,7 @@
   name: "dark";
   prefersdark: true;
   --color-primary: #aac4f5;
+  --color-primary-content: #14203a;
 }
 
 /* Starkit's four colours — colorhunt.co/palette/fff2c6fff8deaac4f58ca9ff — the same ones the bar
@@ -30,9 +35,10 @@
   --color-starkit-wash: #fff8de;
   --color-starkit-edge: #aac4f5;
   --color-starkit-accent: #8ca9ff;
-  /* The accent taken towards its background, the way Palette.placeholder does it, so brand text on
-     a white page stays readable rather than glowing. */
-  --color-starkit-ink: #5b6ea6;
+  /* The accent taken towards its background, the way Palette.placeholder does it, so brand text
+     stays readable rather than glowing. It has to move with the theme: one fixed value is either
+     too pale on the cream page or too dark on the slate one. */
+  --color-starkit-ink: light-dark(#3d4f7d, #b9c9f2);
 
   --font-sans: "Nova Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --font-mono: "Nova Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -68,6 +74,9 @@
   padding: 1rem 1.25rem;
 }
 
+/* The gradient is the same four fixed colours under both themes, so the ink on it is fixed too.
+   Inheriting base-content instead puts the dark theme's near-white type on cream at 1.04:1. This
+   one colour clears 6:1 against the periwinkle end and 12:1 against the cream end. */
 .starkit-gradient {
   background-image: linear-gradient(
     120deg,
@@ -76,4 +85,11 @@
     var(--color-starkit-edge) 62%,
     var(--color-starkit-accent) 100%
   );
+  color: #1f2c4a;
+}
+
+/* DaisyUI resolves a button's label from base-content rather than inheriting it, so a ghost button
+   on the gradient needs telling. */
+.starkit-gradient .btn-ghost {
+  --btn-rest-fg: #1f2c4a;
 }
