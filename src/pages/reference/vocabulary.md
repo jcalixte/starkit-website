@@ -9,7 +9,7 @@ It is vendored into `~/.starkit` and overwritten on every install. Do not edit i
 
 ## `Effect`
 
-Something a Script asks the Shelf to do. See [the four Effects](../guide/effects).
+Something a Script asks the Shelf to do. See [the four Effects](/guide/effects).
 
 ```gleam
 pub type Effect {
@@ -87,7 +87,7 @@ pub type Script {
 Effects to perform. It may reach the network on its own; it may never touch the machine.
 
 Two constructors because there is no synchronous HTTP on this target. Write `Script` unless you
-[reach the network](../guide/fetching).
+[reach the network](/guide/fetching).
 
 ## `empty_context`
 

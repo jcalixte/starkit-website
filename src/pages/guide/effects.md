@@ -51,4 +51,4 @@ so write the sentence.
 ## There is no fifth Effect
 
 And no escape hatch standing in for one. A Script that needs a new capability gets a new word in the
-Vocabulary, which is a design decision — see [limits](../reference/limits#when-four-words-are-not-enough).
+Vocabulary, which is a design decision — see [limits](/reference/limits#when-four-words-are-not-enough).

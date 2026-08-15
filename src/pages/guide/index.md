@@ -67,4 +67,4 @@ network, and both turn every failure into a sentence.
 | ⌃D, then ⌃D again | Moves a Script and its test to the Trash, naming the files first                    |
 | Escape or ⌃⌘K     | Dismisses the bar. A Script already running still finishes and performs its Effects |
 
-Next: [write one](./your-first-script).
+Next: [write one](/guide/your-first-script).

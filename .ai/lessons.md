@@ -11,7 +11,7 @@ own background. Two causes, both invisible to every gate in the repo:
   `base-content` — which the dark theme turns near-white.
 
 **Rule:** whenever a colour is hand-written — a theme token, a gradient, a banner — measure the
-pairs it creates against WCAG AA (4.5:1, or 3:1 at 24px+) in *both* colour schemes before calling
+pairs it creates against WCAG AA (4.5:1, or 3:1 at 24px+) in _both_ colour schemes before calling
 the work done. The ratio is the evidence; a green build is not. The measuring snippet lives in the
 `apoena-new` skill under Step 3 → Contrast.
 

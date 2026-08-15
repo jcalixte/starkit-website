@@ -60,4 +60,4 @@ the row it picked before ↩ reaches it, and a terminal shows nothing between th
 Effects. `Starkit run c` will not reach `clean`.
 
 While debugging, print with `echo` or `io.println_error`. Both go to stderr and are safe.
-`io.println` does not — see [limits](../reference/limits).
+`io.println` does not — see [limits](/reference/limits).

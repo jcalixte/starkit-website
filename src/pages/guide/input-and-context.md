@@ -39,7 +39,7 @@ machine themselves. One slice exists:
 
 An undeclared Need arrives as its empty value instead of failing to compile. Forgetting
 `needs: [RunningApps]` therefore gives you an empty list and a Script that decides on nothing, which
-is why the `clean` Kill list is [tested](./testing).
+is why the `clean` Kill list is [tested](/guide/testing).
 
 ```gleam
 import starkit.{type Effect, type Script, Decides, Kill, RunningApps, Script}

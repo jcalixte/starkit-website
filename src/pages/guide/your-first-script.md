@@ -78,21 +78,21 @@ else, so the function name and its visibility are not yours to change.
 
 Two constructors, and you want `Script` unless you reach the network:
 
-| Constructor | `run` returns           | For                                                         |
-| ----------- | ----------------------- | ----------------------------------------------------------- |
-| `Script`    | `List(Effect)`          | Everything local                                            |
-| `Fetching`  | `Promise(List(Effect))` | A Script that must [fetch](./fetching) before it can decide |
+| Constructor | `run` returns           | For                                                              |
+| ----------- | ----------------------- | ---------------------------------------------------------------- |
+| `Script`    | `List(Effect)`          | Everything local                                                 |
+| `Fetching`  | `Promise(List(Effect))` | A Script that must [fetch](/guide/fetching) before it can decide |
 
 The fields are the same for both:
 
-| Field            | Holds                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------ |
-| `keyword`        | The canonical Keyword. It is the module name, so it is the file name too             |
-| `name`           | What the bar shows on the row                                                        |
-| `other_keywords` | Shorthand this Script also answers to, like `["yt"]`. `[]` is the normal case        |
-| `needs`          | The [Context](./input-and-context) slices the Shelf should gather before running you |
-| `asks`           | `Decides`, or `Asks(for:)` to get a line of [Input](./input-and-context) first       |
-| `run`            | `fn(String, Context) -> List(Effect)` — the decision itself                          |
+| Field            | Holds                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| `keyword`        | The canonical Keyword. It is the module name, so it is the file name too                  |
+| `name`           | What the bar shows on the row                                                             |
+| `other_keywords` | Shorthand this Script also answers to, like `["yt"]`. `[]` is the normal case             |
+| `needs`          | The [Context](/guide/input-and-context) slices the Shelf should gather before running you |
+| `asks`           | `Decides`, or `Asks(for:)` to get a line of [Input](/guide/input-and-context) first       |
+| `run`            | `fn(String, Context) -> List(Effect)` — the decision itself                               |
 
 ## Something worth running
 
@@ -124,4 +124,4 @@ Starkit run work --dry-run   # prints the Effects, performs none
 
 `--dry-run` is the debugging path and is kept permanently.
 
-Next: [the four Effects](./effects) it can ask for.
+Next: [the four Effects](/guide/effects) it can ask for.

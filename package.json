@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite-ssg build",
+    "build": "vue-tsc -b && vite-ssg build && node scripts/check-links.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "preview": "vite preview",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",

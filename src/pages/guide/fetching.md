@@ -81,4 +81,4 @@ JSON with no key, so the title arrives decoded rather than extracted from HTML. 
 
 Prefer a documented endpoint when one exists. Scanning HTML gets some pages wrong, and the pages it
 gets wrong are pinned in `link.gleam`'s test suite rather than fixed, because fixing them means an
-HTML parser — a new dependency, and an [ask first](../reference/imports#adding-a-dependency).
+HTML parser — a new dependency, and an [ask first](/reference/imports#adding-a-dependency).

@@ -5,7 +5,7 @@ All of them deliberate.
 ## What a Script cannot do
 
 - **Touch the machine.** No filesystem access, no process control, no shelling out, no AppleScript.
-  Only [Effects](../guide/effects).
+  Only [Effects](/guide/effects).
 - **Use `@external`.** Zero FFI is a measured property of the design, and it is what makes
   `starkit.gleam` the whole interface.
 - **Run another Script, or reach into one.** `import scripts/other` is not a supported shape.
@@ -19,7 +19,7 @@ All of them deliberate.
 - **Carry configuration outside its Manifest.** There is no config file and no per-Script key
   binding; the only key binding in Starkit summons the bar.
 - **Use OTP, actors, or an Erlang-only Hex package.** The target is
-  [JavaScript](./imports#the-target-is-javascript).
+  [JavaScript](/reference/imports#the-target-is-javascript).
 
 ## Crashing
 
