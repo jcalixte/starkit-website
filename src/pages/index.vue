@@ -55,7 +55,7 @@ const features = [
         <p class="text-sm opacity-80">{{ feature.details }}</p>
         <div class="card-actions mt-2">
           <RouterLink :to="feature.link" class="link link-primary text-sm">
-            {{ feature.linkText }} →
+            {{ feature.linkText }}
           </RouterLink>
         </div>
       </div>
