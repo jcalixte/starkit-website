@@ -45,13 +45,13 @@ registers nothing without saying so — quit the other one.
 Five Scripts are seeded on install, and they are yours from that moment: seeded once, never
 overwritten by a later install.
 
-| Keyword | Does |
-| ------- | ---- |
-| `link` | Reads a URL's `h1` and pastes `[Title](url)` |
-| `youtube`, `yt` | Turns a YouTube link into the note a video gets written down as |
-| `clean` | Kills every running application except the ones on your keep list |
-| `work` | Opens your working day — ships empty, fill it in yourself |
-| `personal` | The same, for everything else |
+| Keyword         | Does                                                              |
+| --------------- | ----------------------------------------------------------------- |
+| `link`          | Reads a URL's `h1` and pastes `[Title](url)`                      |
+| `youtube`, `yt` | Turns a YouTube link into the note a video gets written down as   |
+| `clean`         | Kills every running application except the ones on your keep list |
+| `work`          | Opens your working day — ships empty, fill it in yourself         |
+| `personal`      | The same, for everything else                                     |
 
 `link.gleam` and `youtube.gleam` are the two worth reading before you write anything: both reach the
 network, and both turn every failure into a sentence.
@@ -60,11 +60,11 @@ network, and both turn every failure into a sentence.
 
 ⌃⌘K, type a Keyword, press ↩.
 
-| Key | Does |
-| --- | ---- |
-| ↩ | Runs the selected Script, or creates one when nothing matches |
-| ⌥↩ or ⌃O | Opens the selected Script in your editor, or writes the one nothing matched |
-| ⌃D, then ⌃D again | Moves a Script and its test to the Trash, naming the files first |
-| Escape or ⌃⌘K | Dismisses the bar. A Script already running still finishes and performs its Effects |
+| Key               | Does                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| ↩                 | Runs the selected Script, or creates one when nothing matches                       |
+| ⌥↩ or ⌃O          | Opens the selected Script in your editor, or writes the one nothing matched         |
+| ⌃D, then ⌃D again | Moves a Script and its test to the Trash, naming the files first                    |
+| Escape or ⌃⌘K     | Dismisses the bar. A Script already running still finishes and performs its Effects |
 
 Next: [write one](./your-first-script).

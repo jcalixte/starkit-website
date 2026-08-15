@@ -1,6 +1,5 @@
 node_modules
-docs/.vitepress/dist
-docs/.vitepress/cache
+dist
 .git
 .github
-README.md
+.zed

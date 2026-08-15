@@ -64,7 +64,7 @@ fn decide(input: String) -> Promise(List(Effect)) {
 }
 ```
 
-Note the shape: the functions that can fail return `Result(_, String)`, where the error *is* the
+Note the shape: the functions that can fail return `Result(_, String)`, where the error _is_ the
 sentence. Nothing has to be phrased twice.
 
 ## https and nothing else

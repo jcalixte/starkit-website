@@ -7,10 +7,10 @@ bar has to know before your code runs.
 
 The **Input** is the text typed after the Keyword. Which of the two you get is `asks`:
 
-| `asks` | In the bar | `run` receives |
-| ------ | ---------- | -------------- |
-| `Decides` | No stage. Runs on the first ↩ | `""`, unless someone typed a line after the Keyword anyway |
-| `Asks(for: "YouTube URL")` | A stage carrying that question, Seeded from the clipboard and arriving selected | What was in the field |
+| `asks`                     | In the bar                                                                      | `run` receives                                             |
+| -------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `Decides`                  | No stage. Runs on the first ↩                                                   | `""`, unless someone typed a line after the Keyword anyway |
+| `Asks(for: "YouTube URL")` | A stage carrying that question, Seeded from the clipboard and arriving selected | What was in the field                                      |
 
 `Asks` labels are questions in the bar's own voice, so `Asks(for: "YouTube URL")` reads as one in
 the place a person is about to answer it. Seeding from the clipboard means accepting what you just
@@ -33,9 +33,9 @@ run: fn(input, _context) {
 The **Context** is what the Shelf gathered for the **Needs** you declared. Scripts cannot read the
 machine themselves. One slice exists:
 
-| Need | Field | Holds |
-| ---- | ----- | ----- |
-| `RunningApps` | `context.running_apps` | The applications a person can see and switch to, as the names *this machine* displays: `Calculatrice` on a French Mac |
+| Need          | Field                  | Holds                                                                                                                 |
+| ------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `RunningApps` | `context.running_apps` | The applications a person can see and switch to, as the names _this machine_ displays: `Calculatrice` on a French Mac |
 
 An undeclared Need arrives as its empty value instead of failing to compile. Forgetting
 `needs: [RunningApps]` therefore gives you an empty list and a Script that decides on nothing, which
@@ -58,7 +58,7 @@ pub fn script() -> Script {
 
 ## Names are what the machine displays
 
-`context.running_apps` holds what each application calls itself on *this* machine. Case and
+`context.running_apps` holds what each application calls itself on _this_ machine. Case and
 surrounding spaces are safe to ignore; the language is not. A keep list saying `Calculator` spares
 nothing on a French Mac, where the list says `Calculatrice`.
 

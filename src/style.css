@@ -1,0 +1,79 @@
+/* The font @import MUST come first — before @import "tailwindcss" — because Tailwind inlines its
+   import into real CSS rules, and the CSS spec requires @import to precede all other rules. If it
+   comes second the build warns and browsers silently DROP it, so the font never loads.
+   api.fonts.coollabs.io is the Coolify team's privacy-friendly Google Fonts mirror (note the
+   `api.` subdomain — the bare host serves their marketing page, not CSS). */
+@import url("https://api.fonts.coollabs.io/css2?family=Nova+Mono&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #8ca9ff;
+  --color-base-100: #fffdf6;
+  --color-base-200: #fff8de;
+  --color-base-300: #fff2c6;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  prefersdark: true;
+  --color-primary: #aac4f5;
+}
+
+/* Starkit's four colours — colorhunt.co/palette/fff2c6fff8deaac4f58ca9ff — the same ones the bar
+   and the app icon are drawn from. Cream fruit, periwinkle plate. */
+@theme {
+  --color-starkit-fruit: #fff2c6;
+  --color-starkit-wash: #fff8de;
+  --color-starkit-edge: #aac4f5;
+  --color-starkit-accent: #8ca9ff;
+  /* The accent taken towards its background, the way Palette.placeholder does it, so brand text on
+     a white page stays readable rather than glowing. */
+  --color-starkit-ink: #5b6ea6;
+
+  --font-sans: "Nova Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-mono: "Nova Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Nova Mono ships one weight, so 500/600/700 are the browser's own synthesis — headings still read
+   heavier than the prose under them. A monospace at 16px also sets about a fifth wider than a
+   proportional face, so the body steps back half a size and the line height goes back up. */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+
+  .prose :where(p, li, td, th):not(:where([class~="not-prose"] *)) {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}
+
+/* Shiki emits both themes at once: the light colours inline, the dark ones as --shiki-dark custom
+   properties. Swap them wholesale when the OS asks for dark. */
+@media (prefers-color-scheme: dark) {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+}
+
+.prose pre.shiki {
+  border: 1px solid var(--color-base-300);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.starkit-gradient {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-starkit-fruit) 0%,
+    var(--color-starkit-wash) 26%,
+    var(--color-starkit-edge) 62%,
+    var(--color-starkit-accent) 100%
+  );
+}

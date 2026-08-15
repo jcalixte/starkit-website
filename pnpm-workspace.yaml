@@ -1,2 +1,8 @@
 allowBuilds:
   esbuild: true
+
+# unplugin-vue-markdown pins markdown-exit ^1.0.0-beta.9 and @shikijs/markdown-exit pins
+# ^1.1.0-beta.2; semver treats those prereleases as disjoint, so without this both get installed
+# and the shiki plugin is typed against an instance it never receives.
+overrides:
+  markdown-exit: 1.1.0-beta.2

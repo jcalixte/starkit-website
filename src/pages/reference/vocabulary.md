@@ -1,7 +1,7 @@
 # The Vocabulary
 
 Everything `starkit.gleam` exports. This module is the whole interface between a Script and the
-Shelf: a Script decides *what* should happen by returning Effects, the Shelf decides *how*, and
+Shelf: a Script decides _what_ should happen by returning Effects, the Shelf decides _how_, and
 nothing else crosses the boundary. Every capability the Shelf holds is a permission somebody had to
 grant once, which is why there is no escape hatch.
 

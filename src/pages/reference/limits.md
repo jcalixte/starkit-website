@@ -11,7 +11,7 @@ All of them deliberate.
 - **Run another Script, or reach into one.** `import scripts/other` is not a supported shape.
 - **Outlive 5 seconds.** A Script still running then is killed and the bar says so. A fetch that
   never returns is what that deadline is for.
-- **Write to stdout.** `stdout` *is* the protocol: `io.println` lands in front of the JSON reply and
+- **Write to stdout.** `stdout` _is_ the protocol: `io.println` lands in front of the JSON reply and
   earns you `Starkit could not read what "x" answered`. `echo` and `io.println_error` go to stderr
   and are safe, which is how you print while debugging.
 - **Keep anything between runs.** A fresh `bun` per run, and nothing survives it. No caches, no

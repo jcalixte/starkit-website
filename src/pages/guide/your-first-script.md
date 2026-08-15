@@ -1,8 +1,8 @@
 # Your first Script
 
 A **Script** is one Gleam module in `~/.starkit/src/scripts/`. It turns an **Input** and a
-**Context** into a list of **Effects**. It decides *what* should happen; the **Shelf** decides
-*how*, and is the only side permitted to touch the machine.
+**Context** into a list of **Effects**. It decides _what_ should happen; the **Shelf** decides
+_how_, and is the only side permitted to touch the machine.
 
 ## Create the file
 
@@ -78,21 +78,21 @@ else, so the function name and its visibility are not yours to change.
 
 Two constructors, and you want `Script` unless you reach the network:
 
-| Constructor | `run` returns | For |
-| ----------- | ------------- | --- |
-| `Script` | `List(Effect)` | Everything local |
-| `Fetching` | `Promise(List(Effect))` | A Script that must [fetch](./fetching) before it can decide |
+| Constructor | `run` returns           | For                                                         |
+| ----------- | ----------------------- | ----------------------------------------------------------- |
+| `Script`    | `List(Effect)`          | Everything local                                            |
+| `Fetching`  | `Promise(List(Effect))` | A Script that must [fetch](./fetching) before it can decide |
 
 The fields are the same for both:
 
-| Field | Holds |
-| ----- | ----- |
-| `keyword` | The canonical Keyword. It is the module name, so it is the file name too |
-| `name` | What the bar shows on the row |
-| `other_keywords` | Shorthand this Script also answers to, like `["yt"]`. `[]` is the normal case |
-| `needs` | The [Context](./input-and-context) slices the Shelf should gather before running you |
-| `asks` | `Decides`, or `Asks(for:)` to get a line of [Input](./input-and-context) first |
-| `run` | `fn(String, Context) -> List(Effect)` — the decision itself |
+| Field            | Holds                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| `keyword`        | The canonical Keyword. It is the module name, so it is the file name too             |
+| `name`           | What the bar shows on the row                                                        |
+| `other_keywords` | Shorthand this Script also answers to, like `["yt"]`. `[]` is the normal case        |
+| `needs`          | The [Context](./input-and-context) slices the Shelf should gather before running you |
+| `asks`           | `Decides`, or `Asks(for:)` to get a line of [Input](./input-and-context) first       |
+| `run`            | `fn(String, Context) -> List(Effect)` — the decision itself                          |
 
 ## Something worth running
 

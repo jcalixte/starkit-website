@@ -3,12 +3,12 @@
 An **Effect** is something a Script asks the Shelf to do. Every one of them is performed by the
 Shelf, in the order you listed them.
 
-| Effect | Does | Worth knowing |
-| ------ | ---- | ------------- |
-| `Open(app:)` | Brings an application to the front, launching it if needed | Takes the displayed name or the bundle name: `Calculatrice` or `Calculator` both work |
-| `Kill(app:)` | Terminates it immediately | Never asks, never lets it save. Same two spellings accepted |
-| `Paste(text:)` | Puts the text on the clipboard, restores focus to the application you came from, and synthesises ⌘V | The text stays on the clipboard afterwards, so it can be pasted again by hand |
-| `Notify(message:)` | Shows a message in the bar while it is still on screen | Not a system notification, and the only way a Script reports anything, failure included |
+| Effect             | Does                                                                                                | Worth knowing                                                                           |
+| ------------------ | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `Open(app:)`       | Brings an application to the front, launching it if needed                                          | Takes the displayed name or the bundle name: `Calculatrice` or `Calculator` both work   |
+| `Kill(app:)`       | Terminates it immediately                                                                           | Never asks, never lets it save. Same two spellings accepted                             |
+| `Paste(text:)`     | Puts the text on the clipboard, restores focus to the application you came from, and synthesises ⌘V | The text stays on the clipboard afterwards, so it can be pasted again by hand           |
+| `Notify(message:)` | Shows a message in the bar while it is still on screen                                              | Not a system notification, and the only way a Script reports anything, failure included |
 
 `Paste` is the one that needs Accessibility, because synthesising ⌘V does. Nothing else does, and
 the permission is requested the first time a Script uses it.

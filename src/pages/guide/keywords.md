@@ -3,7 +3,7 @@
 ## What a Keyword may be
 
 A **Keyword** is a Gleam module name, so `src/scripts/daily_notes.gleam` answers to `daily_notes`:
-lowercase letters, digits and underscores, starting with a letter. That one is *canonical*.
+lowercase letters, digits and underscores, starting with a letter. That one is _canonical_.
 
 `other_keywords` are shorthand typed in the same field (`yt` for `youtube`). They are not file
 names, so they may be anything you would type.
