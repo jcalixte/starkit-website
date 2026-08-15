@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Starkit">
+  <!-- The app icon, redrawn: the periwinkle plate and the cream carambola AppIcon.swift renders,
+  on Apple's icon grid (an 824-wide plate inside 1024, cornered at 185.4). The fruit is Tabler's
+  `carambola` (MIT), filled rather than stroked, at 0.74 of the plate. -->
+  <rect x="100" y="100" width="824" height="824" rx="185.4" ry="185.4" fill="#8CA9FF"/>
+  <g transform="translate(207.12 218.67) scale(25.4067)">
+    <path fill="#FFF2C6" d="M17.286 21.09q-1.69 .001 -5.288 -2.615q-3.596 2.617 -5.288 2.616q-2.726 0 -.495 -6.8q-9.389 -6.775 2.135 -6.775h.076q1.785 -5.516 3.574 -5.516q1.785 0 3.574 5.516h.076q11.525 0 2.133 6.774q2.23 6.802 -.497 6.8z"/>
+  </g>
+</svg>

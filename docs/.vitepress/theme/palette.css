@@ -1,0 +1,92 @@
+/* Starkit's four colours — colorhunt.co/palette/fff2c6fff8deaac4f58ca9ff — the same ones the bar
+   and the app icon are drawn from. Cream fruit, periwinkle plate. */
+
+:root {
+  --starkit-fruit: #fff2c6;
+  --starkit-wash: #fff8de;
+  --starkit-edge: #aac4f5;
+  --starkit-accent: #8ca9ff;
+
+  /* The accent taken towards its background, the way Palette.placeholder does it, so brand text on
+     a white page stays readable rather than glowing. */
+  --starkit-accent-ink: #5b6ea6;
+
+  --starkit-gradient: linear-gradient(
+    120deg,
+    var(--starkit-fruit) 0%,
+    var(--starkit-wash) 26%,
+    var(--starkit-edge) 62%,
+    var(--starkit-accent) 100%
+  );
+}
+
+/* Nova Mono everywhere, the way the bar is monospaced. One weight only, so 500/600/700 are the
+   browser's own synthesis — headings still read heavier than the prose under them. */
+:root {
+  --vp-font-family-base: 'Nova Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --vp-font-family-mono: 'Nova Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+/* A monospace at 16px sets about a fifth wider than a proportional face, so a paragraph runs past
+   the measure a line can be read in one go. Half a step back on the body, and the line height back
+   up to what mono needs. */
+.vp-doc p,
+.vp-doc li,
+.vp-doc td,
+.vp-doc th {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Nova Mono has one weight, so the browser fakes the rest. Faked bold on a mono at small sizes
+   fills its counters in — letter-spacing gives them back. */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.VPHome .name,
+.VPHome .text {
+  letter-spacing: -0.01em;
+}
+
+:root {
+  --vp-c-brand-1: var(--starkit-accent-ink);
+  --vp-c-brand-2: #4d5f93;
+  --vp-c-brand-3: var(--starkit-accent);
+  --vp-c-brand-soft: rgba(140, 169, 255, 0.24);
+
+  --vp-home-hero-name-background: var(--starkit-gradient);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-image-background-image: var(--starkit-gradient);
+  --vp-home-hero-image-filter: blur(48px);
+
+  --vp-button-brand-bg: var(--starkit-accent);
+  --vp-button-brand-border: var(--starkit-accent);
+  --vp-button-brand-text: #1c2440;
+  --vp-button-brand-hover-bg: var(--starkit-edge);
+  --vp-button-brand-hover-border: var(--starkit-edge);
+  --vp-button-brand-hover-text: #1c2440;
+  --vp-button-brand-active-bg: var(--starkit-edge);
+}
+
+.dark {
+  --vp-c-brand-1: var(--starkit-accent);
+  --vp-c-brand-2: var(--starkit-edge);
+  --vp-c-brand-3: var(--starkit-accent);
+  --vp-c-brand-soft: rgba(140, 169, 255, 0.18);
+}
+
+/* The gradient again as the page's own edge, so the top of every page reads as the bar's chip. */
+.VPNav {
+  border-top: 3px solid transparent;
+  border-image: var(--starkit-gradient) 1;
+}
+
+.VPHome .name .clip {
+  /* The four stops need room to be four; a short word otherwise shows two. */
+  background-size: 140% 100%;
+}
+
+/* A Keyword in prose, set like the bar sets it. */
+:not(pre) > code {
+  color: var(--vp-c-brand-1);
+}
