@@ -30,5 +30,9 @@ periwinkle plate and cream carambola `AppIcon.swift` renders, on Apple's icon gr
 
 ## Deploy
 
-`.github/workflows/deploy.yml` builds on a push to `main` and publishes to GitHub Pages.
-`docs/public/CNAME` points the site at `starkit.app`.
+Pushes to `main` are picked up by Coolify at https://platform.apoena.dev, which builds the
+`Dockerfile` — node builds the site, nginx serves it. `nginx.conf` carries the one rule that
+matters: `try_files $uri $uri.html $uri/index.html`, because `cleanUrls` writes
+`/guide/effects.html` and links to `/guide/effects`.
+
+The site is https://starkit.app. Its DNS is an `at.marque.dns` record in the apoena PDS.
