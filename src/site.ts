@@ -28,7 +28,7 @@ export const sidebar: SidebarSection[] = [
     items: [
       { text: "Install Starkit", link: "/guide" },
       { text: "Your first Script", link: "/guide/your-first-script" },
-      { text: "The four Effects", link: "/guide/effects" },
+      { text: "The Effects", link: "/guide/effects" },
       { text: "Input and Context", link: "/guide/input-and-context" },
       { text: "Reaching the network", link: "/guide/fetching" },
       { text: "Testing a Script", link: "/guide/testing" },

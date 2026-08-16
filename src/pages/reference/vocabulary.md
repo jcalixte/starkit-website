@@ -9,16 +9,22 @@ It is vendored into `~/.starkit` and overwritten on every install. Do not edit i
 
 ## `Effect`
 
-Something a Script asks the Shelf to do. See [the four Effects](/guide/effects).
+Something a Script asks the Shelf to do. See [the Effects](/guide/effects).
 
 ```gleam
 pub type Effect {
   Open(app: String)
+  Browse(url: String)
   Kill(app: String)
+  Copy(text: String)
   Paste(text: String)
   Notify(message: String)
 }
 ```
+
+`Browse` takes a whole URL, scheme and all, and Refuses a bare name rather than opening it as a
+relative path — an application by name is an `Open`. `Copy` is the clipboard write a `Paste`
+performs, without the keystroke, so it needs no Accessibility grant.
 
 ## `Need`
 

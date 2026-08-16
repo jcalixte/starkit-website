@@ -10,9 +10,9 @@ const features = [
     linkText: "The shape",
   },
   {
-    title: "Four Effects, no fifth",
+    title: "Six Effects, no escape hatch",
     details:
-      "Open, Kill, Paste, Notify. A Script decides what should happen; the Shelf decides how, and is the only side permitted to touch the machine.",
+      "Open, Browse, Kill, Copy, Paste, Notify. A Script decides what should happen; the Shelf decides how, and is the only side permitted to touch the machine.",
     link: "/guide/effects",
     linkText: "What each one does",
   },

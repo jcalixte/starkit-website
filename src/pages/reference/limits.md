@@ -39,7 +39,7 @@ process partway down its own list.
   manifest.
 - Effects go out and nothing comes back, so no Script can stop and offer you a list to choose from.
 
-## When four words are not enough
+## When the Vocabulary is not enough
 
 Adding an Effect or a Context slice is a design decision, and the smallness of the Vocabulary is the
 property being defended — so the bar for a new word is several Scripts needing it and not one. The

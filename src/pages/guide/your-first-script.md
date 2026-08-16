@@ -124,4 +124,4 @@ Starkit run work --dry-run   # prints the Effects, performs none
 
 `--dry-run` is the debugging path and is kept permanently.
 
-Next: [the four Effects](/guide/effects) it can ask for.
+Next: [the Effects](/guide/effects) it can ask for.

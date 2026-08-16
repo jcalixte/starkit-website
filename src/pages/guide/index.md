@@ -33,7 +33,8 @@ Starkit lives in the menu bar, and the icon turns red when something is wrong �
 says so immediately, instead of waiting for you to try running something.
 
 - **Accessibility** is requested the first time a Script uses `Paste`, because synthesising ⌘V needs
-  it. Nothing else does. System Settings → Privacy & Security → Accessibility → Starkit.
+  it. Nothing else does, `Copy` included. System Settings → Privacy & Security → Accessibility →
+  Starkit.
 - **Start at Login** is turned on once by the app itself, and can be toggled from the menu
   afterwards.
 
