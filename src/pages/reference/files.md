@@ -10,9 +10,6 @@ Everything lives in `~/.starkit`.
 | `src/registry.gleam`                                                                              | Generated from `src/scripts/` on every save. Do not edit                      |
 | `starkit.toml`                                                                                    | Yours, and optional: Toolchain paths, for a shell that hides `gleam` or `bun` |
 
-Nothing in `~/.starkit` is ever committed back to the Starkit repo, which is why `work.gleam` ships
-empty — the names of your employer's tools stay yours.
-
 ## `starkit.toml`
 
 Only needed when `gleam` or `bun` are not where a login shell would find them:
